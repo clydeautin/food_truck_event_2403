@@ -137,7 +137,7 @@ RSpec.describe Event do
             event.add_food_truck(food_truck2)
             event.add_food_truck(food_truck3)
 
-            expect(event.total_inventory).to include({item1 => {quantity => 100, food_truck => food_truck1, food_truck3}})
+            expect(event.total_inventory).to include(item1 => {quantity => 100, food_truck => food_truck1, food_truck3})
         end
     end
 end

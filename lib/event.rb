@@ -49,5 +49,19 @@ class Event
         overstocked.keys
     end
 
+    def total_inventory
+        event_inventory = {}
+
+        food_trucks.each do |food_truck|
+            truck.inventory.each do |item, quantity|
+                if event_inventory[item]
+                    event_inventory[:food_trucks] << food_truck unless event_inventory[item][:food_trucks].include(food_truck)
+                else
+                    event_inventory[item] = {quantity: quantity, food_trucks: [food_truck]}
+                end
+            end
+        end
+        event_inventory
+    end
 
 end
