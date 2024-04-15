@@ -90,8 +90,8 @@ RSpec.describe Event do
             event.add_food_truck(food_truck1)
             event.add_food_truck(food_truck2)
             event.add_food_truck(food_truck3)
-
-            expect(event.sorted_item_list).to eq([item1, item2, item3, item4])
+            alphabetical_list = [item1.name, item2.name, item3.name, item4.name].sort
+            expect(event.sorted_item_list).to eq(alphabetical_list)
         end
     end
 end
