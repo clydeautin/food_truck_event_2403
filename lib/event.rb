@@ -29,4 +29,6 @@ class Event
         end
         item_list.uniq.sort
     end
+
+    
 end
