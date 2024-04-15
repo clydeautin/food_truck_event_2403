@@ -20,6 +20,7 @@ RSpec.describe Event do
             event.add_food_truck(food_truck1)
 
             expect(event.food_trucks).to include(food_truck1)
+            expect(event.food_truck_names).to include("Rocky Mountain Pies")
         end
     end
 end
