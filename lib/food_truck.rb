@@ -6,4 +6,6 @@ class FoodTruck
         @name = name
         @inventory = {}
     end
+
+    def
 end
