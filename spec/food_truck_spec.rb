@@ -4,12 +4,12 @@ RSpec.configure do |config|
     config.formatter = :documentation
 end
 
-RSpec.describe Food_truck do
+RSpec.describe FoodTruck do
     describe 'initialize' do
-        it 'is an instance of Item' do
+        it 'is an instance of food_truck' do
             food_truck = FoodTruck.new("Rocky Mountain Pies")
 
-            expect(food_truck).to be_an_instance_of(Food_truck)
+            expect(food_truck).to be_an_instance_of(FoodTruck)
         end
     end
 end
