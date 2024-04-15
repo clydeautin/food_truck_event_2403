@@ -14,4 +14,12 @@ class FoodTruck
             @inventory[item]
         end
     end
+
+    def stock(item, amount)
+        if @inventory.key?(item)
+            @inventory[item] += amount
+        else
+            @inventory[item] = amount
+        end
+    end
 end
