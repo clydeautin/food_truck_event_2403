@@ -19,4 +19,6 @@ class Event
         trucks_with_item = food_trucks.select { |food_truck| food_truck.inventory.include?(item) }
         trucks_with_item
     end
+
+
 end

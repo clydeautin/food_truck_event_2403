@@ -22,4 +22,11 @@ class FoodTruck
             @inventory[item] = amount
         end
     end
+
+    def potential_revenue
+        @inventory.sum do |item, amount|
+            price = item.price.gsub('$', '').to_f
+            price * amount
+        end
+    end
 end
